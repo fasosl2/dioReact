@@ -14,7 +14,8 @@ import {
     UserPicture,
     Wrapper
 } from "./styles";
-const Header = ({autenticado}) => {
+import { IHeader } from './types';
+const Header = ({autenticado}: IHeader) => {
     const navigate = useNavigate();
 
     const handleClickSignIn = () => {
