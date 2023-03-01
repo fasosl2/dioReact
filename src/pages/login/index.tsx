@@ -8,9 +8,10 @@ import * as yup from "yup";
 import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
+import {Container, ContainerSection} from '../../styles/global';
 
 import{ api } from "../../services/api"
-import { Container, Column, CriarText, EsqueciText, Row, SubTitleLogin, Title, TitleLogin, Wrapper} from './styles';
+import { CriarText, EsqueciText, Row, SubTitleLogin, Title, TitleLogin, Wrapper} from './styles';
 import { IFormData } from './types';
 
 const schema = yup.object({
@@ -45,13 +46,13 @@ const Login = () => {
     return(<> 
         <Header />
         <Container>
-            <Column>
+            <ContainerSection>
                 <Title>
                     A plataforma para você aprender com experts, dominar as principais tecnologias
                     e entrar mais rápido nas empresas mais desejadas.
                 </Title>
-            </Column>
-            <Column>
+            </ContainerSection>
+            <ContainerSection>
                 <Wrapper>
                     <TitleLogin>Faça seu cadastro</TitleLogin>
                     <SubTitleLogin>Faça seu login e make the change._</SubTitleLogin>
@@ -65,7 +66,7 @@ const Login = () => {
                         <CriarText>Criar Conta</CriarText>
                     </Row>
                 </Wrapper>
-            </Column>
+            </ContainerSection>
         </Container>
     </>)
 }

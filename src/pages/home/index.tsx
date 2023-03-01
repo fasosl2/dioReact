@@ -5,7 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import  bannerImage from '../../assets/banner-crop.png'
 import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
-import { Container, Title, TitleHighlight, TextContent, HomeBanner } from './styles';
+import {Container, ContainerSection} from '../../styles/global';
+
+import { Title, TitleHighlight, TextContent, HomeBanner } from './styles';
 const Home = () => {
     const navigate = useNavigate();
 
@@ -15,7 +17,7 @@ const Home = () => {
     return(<> 
         <Header />
         <Container>
-            <div>
+            <ContainerSection>
                 <Title>
                     <TitleHighlight>
                         Implemente
@@ -28,10 +30,10 @@ const Home = () => {
                         desafio profissional, evoluindo em comunidade com os melhores experts. 
                 </TextContent>
                 <Button title="Começar agora" variant='secondary' onClick={handleClickSignIn} />
-            </div>
-            <div>
+            </ContainerSection>
+            <ContainerSection>
                 <HomeBanner src={bannerImage} alt="Imagem Principal" />
-            </div>
+            </ContainerSection>
         </Container>
     </>)
 }
